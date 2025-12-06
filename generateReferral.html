@@ -8,7 +8,11 @@
 
     <script>
         const referralCodes = ["randomCode1", "randomCode2", "randomCode3", "randomCode4", "randomCode5"];
-        const getGenerateRandomCode = () => referralCodes[Math.floor(Math.random() * referralCodes.length)];
+        const getGenerateRandomCode = () => {
+            const index = Math.floor(Math.random() * referralCodes.length);
+            return referralCodes[index];
+        };
+
 
         document.getElementById("btn").onclick = () => {
             document.getElementById("code").innerText = getGenerateRandomCode();
