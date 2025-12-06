@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Referral Code Generator</h1>
+    <button id="btn">Generate Code</button>
+    <p id="code"></p>
+
+    <script>
+        const referralCodes = ["randomCode1", "randomCode2", "randomCode3", "randomCode4", "randomCode5"];
+        const getGenerateRandomCode = () => referralCodes[Math.floor(Math.random() * referralCodes.length)];
+
+        document.getElementById("btn").onclick = () => {
+            document.getElementById("code").innerText = getGenerateRandomCode();
+        };
+    </script>
+</body>
+
+</html>
